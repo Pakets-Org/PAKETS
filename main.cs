@@ -90,7 +90,22 @@ namespace PAKETS
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e) { new AboutBox1().Show(); }
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e) { }
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e) { }
-        private void perfilToolStripMenuItem_Click(object sender, EventArgs e) { using (var ofd = new OpenFileDialog() { Filter = "Perfil de Pakets (*.pakets)|*.pakets" }) ofd.ShowDialog(); }
+        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var ofd = new OpenFileDialog() { Filter = "Perfil de Pakets (*.pakets)|*.pakets" })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    var path = ofd.FileName;
+                    if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                    {
+                        // Registrar en MRU y abrir
+                        RecentProfilesManager.RegisterOpenedProfile(path);
+                        try { Process.Start(path); } catch { /* ignorar fallo de lanzamiento */ }
+                    }
+                }
+            }
+        }
 
         private void VerlaayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -115,6 +130,16 @@ namespace PAKETS
         private void panel3_Paint_1(object sender, PaintEventArgs e) { }
 
         private void recentlyopened_screen1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

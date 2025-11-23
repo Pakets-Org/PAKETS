@@ -459,6 +459,16 @@ namespace PAKETS
             string paketsFile = Path.Combine(folderPath, sanitized + ".pakets");
             File.WriteAllText(paketsFile, sb.ToString(), Encoding.UTF8);
 
+            // Registrar el perfil recién creado en MRU
+            try
+            {
+                RecentProfilesManager.RegisterOpenedProfile(paketsFile);
+            }
+            catch
+            {
+                // no bloquear si falla el registro
+            }
+
             // Copiar hasta 2 imágenes encontradas en los pasos (preferir step1 images)
             var images = GetAllControls(step1).OfType<PictureBox>().Select(pb => pb.Image).Where(img => img != null).Cast<Image>().ToList();
 

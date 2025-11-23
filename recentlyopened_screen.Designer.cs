@@ -39,11 +39,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(468, 60);
+            this.label2.Size = new System.Drawing.Size(1520, 60);
             this.label2.TabIndex = 3;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -60,6 +61,7 @@
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.ForeColor = System.Drawing.Color.Black;
             this.linkLabel1.Image = ((System.Drawing.Image)(resources.GetObject("linkLabel1.Image")));
@@ -76,6 +78,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(1506, 50);
             this.button4.Name = "button4";
@@ -86,6 +89,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(1434, 50);
             this.button1.Name = "button1";
@@ -96,6 +100,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(1470, 50);
             this.button2.Name = "button2";
@@ -117,7 +122,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
             this.Location = new System.Drawing.Point(261, 138);
             this.Name = "recentlyopened_screen";
-            this.Size = new System.Drawing.Size(1556, 585);
+            this.Size = new System.Drawing.Size(1557, 600);
+            this.Load += new System.EventHandler(this.recentlyopened_screen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

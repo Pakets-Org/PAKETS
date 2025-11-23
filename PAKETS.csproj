@@ -169,6 +169,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="recentlyopened_screen.resx">
       <DependentUpon>recentlyopened_screen.cs</DependentUpon>
@@ -205,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1f4e6.ico" />
+    <None Include="resources\NewTable1.png" />
+    <None Include="resources\NewTable.png" />
+    <None Include="resources\images\NewTable.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
