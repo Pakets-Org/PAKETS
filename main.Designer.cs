@@ -583,8 +583,9 @@
             this.recentlyopened_screen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
             this.recentlyopened_screen1.Location = new System.Drawing.Point(261, 132);
             this.recentlyopened_screen1.Name = "recentlyopened_screen1";
-            this.recentlyopened_screen1.Size = new System.Drawing.Size(1556, 585);
+            this.recentlyopened_screen1.Size = new System.Drawing.Size(1557, 610);
             this.recentlyopened_screen1.TabIndex = 10;
+            this.recentlyopened_screen1.Load += new System.EventHandler(this.recentlyopened_screen1_Load);
             // 
             // main
             // 
