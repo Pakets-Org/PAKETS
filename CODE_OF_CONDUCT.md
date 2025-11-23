@@ -1,6 +1,7 @@
 # Código de conducta de contribución al proyecto PAKETS
 >[!NOTE]
 >Este código de conducta ha sido generado por GitHub en colaboración con "Contributor Covenant ORG"
+>
 >Este código de conducta solo está disponible en Inglés
 
 
