@@ -8,7 +8,6 @@ C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.csproj.GenerateResource.cach
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.csproj.CoreCompileInputs.cache
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.exe
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.pdb
-C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.exe.config
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.main.resources
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.AboutBox1.resources
 C:\Users\danie\source\repos\PAKETS\bin\Debug\PAKETS.exe.manifest
@@ -20,4 +19,4 @@ C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.TrustInfo.xml
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.newcreationstep3.resources
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.newcreationstep2.resources
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.newcreationstep1.resources
-C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.mainwelcomescreen.resources
+C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.recentlyopened_screen.resources

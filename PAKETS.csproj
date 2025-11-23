@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\danie\Desktop\Versiones de packets\Alpha\0.0.8.14\</PublishUrl>
+    <PublishUrl>C:\Users\danie\Desktop\Versiones de packets\Alpha\0.0.8.16\revision 2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>es-ES</TargetCulture>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -105,12 +105,7 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="mainwelcomescreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="mainwelcomescreen.Designer.cs">
-      <DependentUpon>mainwelcomescreen.cs</DependentUpon>
-    </Compile>
+    <Compile Include="main.Responsive.cs" />
     <Compile Include="newcreation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +132,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recentlyopened_screen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="recentlyopened_screen.Designer.cs">
+      <DependentUpon>recentlyopened_screen.cs</DependentUpon>
+    </Compile>
     <Compile Include="welcome_screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mainwelcomescreen.resx">
-      <DependentUpon>mainwelcomescreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newcreation.resx">
       <DependentUpon>newcreation.cs</DependentUpon>
@@ -173,6 +171,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="recentlyopened_screen.resx">
+      <DependentUpon>recentlyopened_screen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="welcome_screen.resx">
       <DependentUpon>welcome_screen.cs</DependentUpon>
     </EmbeddedResource>

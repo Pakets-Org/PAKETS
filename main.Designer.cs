@@ -90,17 +90,15 @@
             this.eliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.separatorPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.recentlyopened_screen1 = new PAKETS.recentlyopened_screen();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -533,6 +531,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.monthCalendar1);
             this.panel1.Controls.Add(this.separatorPanel);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -540,6 +539,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 708);
             this.panel1.TabIndex = 5;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(17, 537);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.ShowWeekNumbers = true;
+            this.monthCalendar1.TabIndex = 6;
             // 
             // separatorPanel
             // 
@@ -551,60 +557,44 @@
             this.separatorPanel.Size = new System.Drawing.Size(217, 1);
             this.separatorPanel.TabIndex = 2;
             // 
-            // panel2
-            // 
-            this.panel2.ContextMenuStrip = this.contextMenuStrip1;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1830, 708);
-            this.panel2.TabIndex = 6;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 60F);
-            this.label2.Location = new System.Drawing.Point(609, 3);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(255, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(435, 106);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bienvenido";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Size = new System.Drawing.Size(526, 55);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Bienvenid@ a PAKETS";
             // 
-            // label3
+            // panel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 60F);
-            this.label3.Location = new System.Drawing.Point(1014, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 106);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "a";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(261, 131);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1556, 1);
+            this.panel3.TabIndex = 8;
             // 
-            // pictureBox1
+            // recentlyopened_screen1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1047, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(451, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.recentlyopened_screen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
+            this.recentlyopened_screen1.Location = new System.Drawing.Point(261, 132);
+            this.recentlyopened_screen1.Name = "recentlyopened_screen1";
+            this.recentlyopened_screen1.Size = new System.Drawing.Size(1556, 585);
+            this.recentlyopened_screen1.TabIndex = 10;
             // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1830, 754);
+            this.Controls.Add(this.recentlyopened_screen1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -620,9 +610,6 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -687,13 +674,13 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paqueteAisladoToolStripMenuItem;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.Panel separatorPanel;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private recentlyopened_screen recentlyopened_screen1;
     }
 }
