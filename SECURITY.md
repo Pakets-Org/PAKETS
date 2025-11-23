@@ -6,7 +6,7 @@ Las actualizaciones se dividen en 2 tipos: Actualizaciones de **SEGURIDAD** y ac
 - CARACTERÍSTICAS: Estas actualizacines son las que incluyen las nuevas funcionalidades del programa.
 
 Cada version viene definida por 3 tipos: Release, Beta y Alpha
-- RELEASE: Es la versión estabe y recomendada para su descarga y uso cotidiano, preparada para hacer frente a fallos y conceder la máxima estabilidad posible a la hora de su ejecución y manejo.
+- RELEASE: Es la versión estable y recomendada para su descarga y uso cotidiano, preparada para hacer frente a fallos y conceder la máxima estabilidad posible a la hora de su ejecución y manejo.
 - BETA: Son las versiones experimentales que no se recomiendan para su uso cotidiano pero que sirven para probar las nuevas funciones que se incluyen en el programa.
 - ALPHA: Son versiones inestables cuya funcion es la misma que las BETA pero que no estan preparadas para usar de forma pública y su descarga está limitada a un grupo muy reducido de usuarios.
 
