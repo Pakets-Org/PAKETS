@@ -4,7 +4,7 @@
 </div>
 
 > [!NOTE]
-> **VERSIÓN ACTUAL:** V0.0 COMPILACIÓN 8.16
+> **VERSIÓN ACTUAL:** V0.0 COMPILACIÓN 8.17
 
 ## 1 | INTRODUCCIÓN
 
@@ -54,7 +54,7 @@ La instalación de PAKETS es como la de cualquier otro programa:
 > [!WARNING]
 > PAKTES actualmente es un programa en desarrollo e inestable, le recomendamos encarecidamente que utilice las versiones "RELEASE" si no es un usuario habituado a versiones Beta ni Alpha que puedan corromper archivos importantes.
 
-PAKETS es de codigo abierto bajo los estandares de la licencia MIT, puede contribuir al desarrollo de la aplicación si lo desea haciendo un Pull Request en el repositorio.
+PAKETS es de codigo abierto bajo los estandares de la licencia GNU AGPL v3, puede contribuir al desarrollo de la aplicación si lo desea haciendo un Pull Request en el repositorio.
 
 Tambien le invitamos a que nos comparta los errores que presente el programa abriendo una Issue para posterior revisión.
 
