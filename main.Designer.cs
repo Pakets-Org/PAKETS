@@ -123,7 +123,7 @@
             this.gestionarHerramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarNuevasHerramientasEnInternetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importarHerramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recentlyopened_screen1 = new PAKETS.recentlyopened_screen();
+            this.recentlyopened_screen = new PAKETS.recentlyopened_screen();
             this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -815,14 +815,14 @@
             this.importarHerramientasToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
             this.importarHerramientasToolStripMenuItem.Text = "Importar herramientas";
             // 
-            // recentlyopened_screen1
+            // recentlyopened_screen
             // 
-            this.recentlyopened_screen1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
-            this.recentlyopened_screen1.Location = new System.Drawing.Point(261, 138);
-            this.recentlyopened_screen1.Name = "recentlyopened_screen1";
-            this.recentlyopened_screen1.Size = new System.Drawing.Size(1557, 604);
-            this.recentlyopened_screen1.TabIndex = 10;
-            this.recentlyopened_screen1.Load += new System.EventHandler(this.recentlyopened_screen1_Load);
+            this.recentlyopened_screen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
+            this.recentlyopened_screen.Location = new System.Drawing.Point(261, 138);
+            this.recentlyopened_screen.Name = "recentlyopened_screen";
+            this.recentlyopened_screen.Size = new System.Drawing.Size(1557, 604);
+            this.recentlyopened_screen.TabIndex = 10;
+            this.recentlyopened_screen.Load += new System.EventHandler(this.recentlyopened_screen_Load);
             // 
             // preferenciasToolStripMenuItem
             // 
@@ -835,7 +835,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1830, 754);
-            this.Controls.Add(this.recentlyopened_screen1);
+            this.Controls.Add(this.recentlyopened_screen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -925,7 +925,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private recentlyopened_screen recentlyopened_screen1;
+        private recentlyopened_screen recentlyopened_screen;
         private System.Windows.Forms.ToolStripMenuItem tráficoDePaqueteríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regístrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;

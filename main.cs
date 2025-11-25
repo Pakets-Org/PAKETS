@@ -129,7 +129,7 @@ namespace PAKETS
 
         private void panel3_Paint_1(object sender, PaintEventArgs e) { }
 
-        private void recentlyopened_screen1_Load(object sender, EventArgs e)
+        private void recentlyopened_screen_Load(object sender, EventArgs e)
         {
 
         }
