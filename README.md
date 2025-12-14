@@ -4,7 +4,7 @@
 </div>
 
 > [!NOTE]
-> **VERSIÓN ACTUAL:** V0.0 COMPILACIÓN 8.18
+> **VERSIÓN ACTUAL:** V0.0 COMPILACIÓN 8.19
 
 ## 1 | INTRODUCCIÓN
 
