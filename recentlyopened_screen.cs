@@ -361,13 +361,16 @@ namespace PAKETS
                 {
                     try
                     {
-                        Process.Start(ruta);
-                        // Registrar como abierto (actualiza MRU)
+                        // Abrir el perfil DENTRO de la aplicación en lugar de lanzar asociación del SO
                         RecentProfilesManager.RegisterOpenedProfile(ruta);
+                        ProfileSessionManager.OpenProfile(ruta);
+
+                        // refrescar la tabla por si fuera necesario
+                        LoadRecentProfilesToGrid();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("No se pudo abrir el archivo:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se pudo abrir el perfil:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -419,7 +422,10 @@ namespace PAKETS
                     if (!string.IsNullOrEmpty(path) && File.Exists(path))
                     {
                         RecentProfilesManager.RegisterOpenedProfile(path);
-                        try { Process.Start(path); } catch { /* ignorar si no se puede iniciar */ }
+
+                        // Abrir IN-APP en lugar de Process.Start
+                        ProfileSessionManager.OpenProfile(path);
+
                         LoadRecentProfilesToGrid();
                     }
                 }
@@ -488,7 +494,10 @@ namespace PAKETS
                             if (!string.IsNullOrEmpty(path) && File.Exists(path) && path.EndsWith(".pakets", StringComparison.OrdinalIgnoreCase))
                             {
                                 RecentProfilesManager.RegisterOpenedProfile(path);
-                                try { Process.Start(path); } catch { }
+
+                                // Abrir IN-APP en lugar de Process.Start
+                                ProfileSessionManager.OpenProfile(path);
+
                                 LoadRecentProfilesToGrid();
                             }
                         }
@@ -521,7 +530,10 @@ namespace PAKETS
                             if (!string.IsNullOrEmpty(path) && File.Exists(path))
                             {
                                 RecentProfilesManager.RegisterOpenedProfile(path);
-                                try { Process.Start(path); } catch { }
+
+                                // Abrir IN-APP en lugar de Process.Start
+                                ProfileSessionManager.OpenProfile(path);
+
                                 LoadRecentProfilesToGrid();
                             }
                         }

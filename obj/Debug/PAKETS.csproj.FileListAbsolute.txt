@@ -20,3 +20,4 @@ C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.newcreationstep3.resources
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.newcreationstep2.resources
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.newcreationstep1.resources
 C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.recentlyopened_screen.resources
+C:\Users\danie\source\repos\PAKETS\obj\Debug\PAKETS.main_enterprise_dashboard.resources

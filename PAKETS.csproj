@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\danie\Desktop\Versiones de packets\Alpha\0.0.8.18\</PublishUrl>
+    <PublishUrl>C:\Users\danie\Desktop\Versiones de packets\Alpha\0.0.8.19\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>es-ES</TargetCulture>
-    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationRevision>20</ApplicationRevision>
     <ApplicationVersion>0.0.8.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -108,6 +108,12 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="main_enterprise_dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main_enterprise_dashboard.Designer.cs">
+      <DependentUpon>main_enterprise_dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="newcreation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_enterprise_dashboard.resx">
+      <DependentUpon>main_enterprise_dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newcreation.resx">
       <DependentUpon>newcreation.cs</DependentUpon>

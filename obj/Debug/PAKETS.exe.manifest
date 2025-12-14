@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PAKETS.exe" size="405984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PAKETS.exe" size="418784">
       <assemblyIdentity name="PAKETS" version="0.0.8.18" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IiDW+Wtq3RB8UBiwRVrpb0dLhpPSdNMQziO/jGEFTHU=</dsig:DigestValue>
+        <dsig:DigestValue>rJInWTU3ZuPfcpW9DQDpj/o6hGMzd8jPCyE2czKdmmc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
