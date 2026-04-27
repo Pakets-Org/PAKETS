@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PAKETS
@@ -18,9 +19,25 @@ namespace PAKETS
         // Dashboard de empresa mostrado al abrir un perfil
         private main_enterprise_dashboard enterpriseDashboard;
 
+        // Gestor de progreso para operaciones de disco
+        private DiskOperationProgressManager progressManager;
+
         public main()
         {
             InitializeComponent();
+
+            // Inicializar gestor de progreso - buscar el StatusStrip correcto
+            StatusStrip statusStripControl = null;
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is StatusStrip)
+                {
+                    statusStripControl = (StatusStrip)ctrl;
+                    break;
+                }
+            }
+            
+            progressManager = new DiskOperationProgressManager(toolStripProgressBar1, statusStripControl);
 
             // Suscribirse a eventos de sesión de perfil
             ProfileSessionManager.ProfileOpened += OnProfileOpened;
@@ -225,19 +242,28 @@ namespace PAKETS
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e) { }
 
         // Nuevo helper: abrir perfil DENTRO de la aplicación (no lanzar asociación/exe externo)
-        private void OpenProfileInApp(string path)
+        private async void OpenProfileInApp(string path)
         {
             if (string.IsNullOrWhiteSpace(path) || !File.Exists(path))
                 return;
 
-            // Registrar en MRU
-            RecentProfilesManager.RegisterOpenedProfile(path);
+            await progressManager.ExecuteWithProgressAsync(async () =>
+            {
+                // Simular progreso de carga
+                progressManager.UpdateProgress(10, "Registrando perfil...");
+                await Task.Delay(100);
 
-            // Notificar apertura de perfil a suscriptores (main ocultará welcome y mostrará dashboard)
-            ProfileSessionManager.OpenProfile(path);
+                // Registrar en MRU
+                RecentProfilesManager.RegisterOpenedProfile(path);
 
-            // Si tienes lógica adicional para cargar el perfil en memoria aquí, ejecútala.
-            // Ejemplo: ProfileLoader.Load(path);
+                progressManager.UpdateProgress(50, "Cargando perfil...");
+                await Task.Delay(100);
+
+                // Notificar apertura de perfil a suscriptores (main ocultará welcome y mostrará dashboard)
+                ProfileSessionManager.OpenProfile(path);
+
+                progressManager.UpdateProgress(100, "Perfil cargado");
+            }, "Abriendo perfil");
         }
 
         // Al abrir perfil desde el menú ahora abrimos DENTRO de la aplicación (evitar Process.Start en .pakets)
@@ -252,10 +278,6 @@ namespace PAKETS
                     {
                         // Abrir dentro de la app (no lanzar la asociación que crea otra instancia)
                         OpenProfileInApp(path);
-
-                        // No llamar a Process.Start(path) para evitar que se abra otra instancia de la aplicación.
-                        // Si realmente necesitas lanzar el archivo en la asociación del SO, hazlo explícitamente
-                        // desde una opción del usuario (ej. "Abrirexternamente").
                     }
                 }
             }
@@ -398,6 +420,154 @@ namespace PAKETS
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void paqueteAisladoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var ofd = new OpenFileDialog() { Filter = "paquete (*.paketfile)|*.paketfile" })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    var path = ofd.FileName;
+                    if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                    {
+                        // Abrir dentro de la app (no lanzar la asociación que crea otra instancia)
+                        OpenProfileInApp(path);
+                    }
+                }
+            }
+        }
+
+        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        {
+            // Evento del click en la barra de progreso (generalmente no se usa)
+        }
+
+        // Método público para que otros componentes reporten progreso
+        public DiskOperationProgressManager GetProgressManager()
+        {
+            return progressManager;
+        }
+    }
+
+    /// <summary>
+    /// Gestor de progreso para operaciones de disco
+    /// </summary>
+    public class DiskOperationProgressManager
+    {
+        private ToolStripProgressBar progressBar;
+        private Control parentControl;
+        private int operationCount = 0;
+
+        public DiskOperationProgressManager(ToolStripProgressBar progressBar, Control parentControl)
+        {
+            this.progressBar = progressBar;
+            this.parentControl = parentControl;
+            
+            if (progressBar != null)
+            {
+                progressBar.Minimum = 0;
+                progressBar.Maximum = 100;
+                progressBar.Value = 0;
+                progressBar.Visible = false;
+            }
+        }
+
+        public async Task ExecuteWithProgressAsync(Func<Task> operation, string operationName = "Procesando")
+        {
+            try
+            {
+                StartOperation(operationName);
+                await operation();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error durante la operación: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                EndOperation();
+            }
+        }
+
+        public void StartOperation(string message = "Procesando")
+        {
+            operationCount++;
+            
+            if (progressBar != null)
+            {
+                if (progressBar.GetCurrentParent() != null && progressBar.GetCurrentParent().InvokeRequired)
+                {
+                    progressBar.GetCurrentParent().Invoke(new Action(() => StartOperation(message)));
+                    return;
+                }
+
+                progressBar.Visible = true;
+                progressBar.Value = 0;
+                progressBar.ToolTipText = message;
+            }
+        }
+
+        public void UpdateProgress(int percentage, string message = null)
+        {
+            if (progressBar != null)
+            {
+                if (progressBar.GetCurrentParent() != null && progressBar.GetCurrentParent().InvokeRequired)
+                {
+                    progressBar.GetCurrentParent().Invoke(new Action(() => UpdateProgress(percentage, message)));
+                    return;
+                }
+
+                progressBar.Value = Math.Min(Math.Max(0, percentage), 100);
+                
+                if (!string.IsNullOrEmpty(message))
+                {
+                    progressBar.ToolTipText = message;
+                }
+            }
+        }
+
+        public void EndOperation()
+        {
+            operationCount--;
+            
+            if (operationCount <= 0)
+            {
+                operationCount = 0;
+                
+                if (progressBar != null)
+                {
+                    if (progressBar.GetCurrentParent() != null && progressBar.GetCurrentParent().InvokeRequired)
+                    {
+                        progressBar.GetCurrentParent().Invoke(new Action(EndOperation));
+                        return;
+                    }
+
+                    progressBar.Value = 100;
+                    
+                    // Ocultar después de un breve delay para que el usuario vea el 100%
+                    Task.Delay(300).ContinueWith(t =>
+                    {
+                        try
+                        {
+                            if (progressBar.GetCurrentParent() != null && progressBar.GetCurrentParent().InvokeRequired)
+                            {
+                                progressBar.GetCurrentParent().Invoke(new Action(() =>
+                                {
+                                    progressBar.Visible = false;
+                                    progressBar.Value = 0;
+                                }));
+                            }
+                            else
+                            {
+                                progressBar.Visible = false;
+                                progressBar.Value = 0;
+                            }
+                        }
+                        catch { }
+                    });
+                }
+            }
         }
     }
 

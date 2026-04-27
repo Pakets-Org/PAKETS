@@ -1,6 +1,6 @@
 ﻿namespace PAKETS
 {
-    partial class main
+    partial class document_visor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,25 +110,33 @@
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitaNuestraWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cortarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.copiarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pegarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.separatorPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.recentlyopened_screen = new PAKETS.recentlyopened_screen();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fecha = new System.Windows.Forms.Label();
+            this.hora = new System.Windows.Forms.Label();
+            this.seguimiento = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.expedicion = new System.Windows.Forms.Label();
+            this.agencia_transporte = new System.Windows.Forms.Label();
+            this.portes = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bultos = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.incidencias_checkbox = new System.Windows.Forms.CheckBox();
+            this.peso = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.volumen = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.medidas = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.background_table = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -146,10 +152,9 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1830, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -175,7 +180,6 @@
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
-            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // abrirToolStripMenuItem
             // 
@@ -185,14 +189,12 @@
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
             this.abrirToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
             this.perfilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.perfilToolStripMenuItem.Text = "Perfil";
-            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // paqueteAisladoToolStripMenuItem
             // 
@@ -206,7 +208,6 @@
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesión";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -218,12 +219,14 @@
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // guardarComoToolStripMenuItem
             // 
             this.guardarComoToolStripMenuItem.Name = "guardarComoToolStripMenuItem";
             this.guardarComoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.guardarComoToolStripMenuItem.Text = "Guardar como...";
+            this.guardarComoToolStripMenuItem.Click += new System.EventHandler(this.guardarComoToolStripMenuItem_Click);
             // 
             // guardarTodoToolStripMenuItem
             // 
@@ -407,7 +410,6 @@
             this.seleccionarToolStripMenuItem.Name = "seleccionarToolStripMenuItem";
             this.seleccionarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.seleccionarToolStripMenuItem.Text = "Seleccionar todo";
-            this.seleccionarToolStripMenuItem.Click += new System.EventHandler(this.seleccionarToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
@@ -474,7 +476,6 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.usuariosToolStripMenuItem.Text = "Ajustes del perfil";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // complementosToolStripMenuItem
             // 
@@ -590,7 +591,6 @@
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.informesToolStripMenuItem.Text = "Impresoras";
-            this.informesToolStripMenuItem.Click += new System.EventHandler(this.informesToolStripMenuItem_Click);
             // 
             // configurarNuevaImpresoraToolStripMenuItem
             // 
@@ -667,7 +667,6 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // VerlaayudaToolStripMenuItem
             // 
@@ -712,7 +711,6 @@
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // visitaNuestraWebToolStripMenuItem
             // 
@@ -720,160 +718,253 @@
             this.visitaNuestraWebToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.visitaNuestraWebToolStripMenuItem.Text = "Visita nuestra web";
             // 
-            // statusStrip1
+            // textBox1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 732);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1830, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.textBox1.Location = new System.Drawing.Point(117, 66);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(277, 20);
+            this.textBox1.TabIndex = 2;
             // 
-            // toolStripStatusLabel1
+            // textBox2
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(26, 17);
-            this.toolStripStatusLabel1.Text = "Idle";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            this.textBox2.Location = new System.Drawing.Point(477, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
             // 
-            // toolStripProgressBar1
+            // textBox5
             // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-            this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
+            this.textBox5.Location = new System.Drawing.Point(720, 40);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(39, 20);
+            this.textBox5.TabIndex = 6;
             // 
-            // contextMenuStrip1
+            // textBox6
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cortarToolStripMenuItem1,
-            this.copiarToolStripMenuItem1,
-            this.pegarToolStripMenuItem1,
-            this.eliminarToolStripMenuItem1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 92);
-            this.contextMenuStrip1.UseWaitCursor = true;
+            this.textBox6.Location = new System.Drawing.Point(336, 40);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(58, 20);
+            this.textBox6.TabIndex = 7;
             // 
-            // cortarToolStripMenuItem1
+            // dateTimePicker1
             // 
-            this.cortarToolStripMenuItem1.Name = "cortarToolStripMenuItem1";
-            this.cortarToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
-            this.cortarToolStripMenuItem1.Text = "Cortar";
+            this.dateTimePicker1.Location = new System.Drawing.Point(74, 40);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 8;
             // 
-            // copiarToolStripMenuItem1
+            // fecha
             // 
-            this.copiarToolStripMenuItem1.Name = "copiarToolStripMenuItem1";
-            this.copiarToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
-            this.copiarToolStripMenuItem1.Text = "Copiar";
+            this.fecha.AutoSize = true;
+            this.fecha.Location = new System.Drawing.Point(31, 43);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(37, 13);
+            this.fecha.TabIndex = 9;
+            this.fecha.Text = "Fecha";
             // 
-            // pegarToolStripMenuItem1
+            // hora
             // 
-            this.pegarToolStripMenuItem1.Name = "pegarToolStripMenuItem1";
-            this.pegarToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
-            this.pegarToolStripMenuItem1.Text = "Pegar";
+            this.hora.AutoSize = true;
+            this.hora.Location = new System.Drawing.Point(300, 43);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(30, 13);
+            this.hora.TabIndex = 10;
+            this.hora.Text = "Hora";
             // 
-            // eliminarToolStripMenuItem1
+            // seguimiento
             // 
-            this.eliminarToolStripMenuItem1.Name = "eliminarToolStripMenuItem1";
-            this.eliminarToolStripMenuItem1.Size = new System.Drawing.Size(92, 22);
-            this.eliminarToolStripMenuItem1.Text = "Eliminar";
+            this.seguimiento.AutoSize = true;
+            this.seguimiento.Location = new System.Drawing.Point(31, 69);
+            this.seguimiento.Name = "seguimiento";
+            this.seguimiento.Size = new System.Drawing.Size(80, 13);
+            this.seguimiento.TabIndex = 11;
+            this.seguimiento.Text = "Nº Seguimiento";
             // 
-            // label1
+            // textBox4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 45F, System.Drawing.FontStyle.Bold);
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 81);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "pAkets";
+            this.textBox4.Location = new System.Drawing.Point(117, 92);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(277, 20);
+            this.textBox4.TabIndex = 12;
             // 
-            // panel1
+            // expedicion
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.monthCalendar1);
-            this.panel1.Controls.Add(this.separatorPanel);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(249, 708);
-            this.panel1.TabIndex = 5;
+            this.expedicion.AutoSize = true;
+            this.expedicion.Location = new System.Drawing.Point(31, 95);
+            this.expedicion.Name = "expedicion";
+            this.expedicion.Size = new System.Drawing.Size(74, 13);
+            this.expedicion.TabIndex = 13;
+            this.expedicion.Text = "Nº Expedición";
             // 
-            // monthCalendar1
+            // agencia_transporte
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(17, 537);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.ShowWeekNumbers = true;
-            this.monthCalendar1.TabIndex = 6;
+            this.agencia_transporte.AutoSize = true;
+            this.agencia_transporte.Location = new System.Drawing.Point(400, 43);
+            this.agencia_transporte.Name = "agencia_transporte";
+            this.agencia_transporte.Size = new System.Drawing.Size(71, 13);
+            this.agencia_transporte.TabIndex = 14;
+            this.agencia_transporte.Text = "A. Transporte";
             // 
-            // separatorPanel
+            // portes
             // 
-            this.separatorPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.separatorPanel.BackColor = System.Drawing.Color.Black;
-            this.separatorPanel.Location = new System.Drawing.Point(17, 107);
-            this.separatorPanel.Name = "separatorPanel";
-            this.separatorPanel.Size = new System.Drawing.Size(217, 1);
-            this.separatorPanel.TabIndex = 2;
+            this.portes.AutoSize = true;
+            this.portes.Location = new System.Drawing.Point(588, 43);
+            this.portes.Name = "portes";
+            this.portes.Size = new System.Drawing.Size(37, 13);
+            this.portes.TabIndex = 15;
+            this.portes.Text = "Portes";
             // 
-            // label2
+            // comboBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(255, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(526, 55);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Bienvenid@ a PAKETS";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Pagados",
+            "Pendientes"});
+            this.comboBox1.Location = new System.Drawing.Point(631, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(83, 21);
+            this.comboBox1.TabIndex = 16;
             // 
-            // panel3
+            // bultos
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(261, 131);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1556, 1);
-            this.panel3.TabIndex = 8;
+            this.bultos.AutoSize = true;
+            this.bultos.Location = new System.Drawing.Point(588, 69);
+            this.bultos.Name = "bultos";
+            this.bultos.Size = new System.Drawing.Size(36, 13);
+            this.bultos.TabIndex = 17;
+            this.bultos.Text = "Bultos";
             // 
-            // recentlyopened_screen
+            // textBox3
             // 
-            this.recentlyopened_screen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
-            this.recentlyopened_screen.Location = new System.Drawing.Point(261, 138);
-            this.recentlyopened_screen.Name = "recentlyopened_screen";
-            this.recentlyopened_screen.Size = new System.Drawing.Size(1557, 604);
-            this.recentlyopened_screen.TabIndex = 10;
-            this.recentlyopened_screen.Load += new System.EventHandler(this.recentlyopened_screen_Load);
+            this.textBox3.Location = new System.Drawing.Point(631, 66);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(39, 20);
+            this.textBox3.TabIndex = 18;
             // 
-            // main
+            // incidencias_checkbox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1830, 754);
-            this.Controls.Add(this.recentlyopened_screen);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.statusStrip1);
+            this.incidencias_checkbox.AutoSize = true;
+            this.incidencias_checkbox.Location = new System.Drawing.Point(679, 68);
+            this.incidencias_checkbox.Name = "incidencias_checkbox";
+            this.incidencias_checkbox.Size = new System.Drawing.Size(80, 17);
+            this.incidencias_checkbox.TabIndex = 19;
+            this.incidencias_checkbox.Text = "Incidencias";
+            this.incidencias_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // peso
+            // 
+            this.peso.AutoSize = true;
+            this.peso.Location = new System.Drawing.Point(400, 69);
+            this.peso.Name = "peso";
+            this.peso.Size = new System.Drawing.Size(31, 13);
+            this.peso.TabIndex = 20;
+            this.peso.Text = "Peso";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(437, 66);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(39, 20);
+            this.textBox7.TabIndex = 21;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(538, 92);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(39, 20);
+            this.textBox8.TabIndex = 22;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(493, 92);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(39, 20);
+            this.textBox9.TabIndex = 23;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(448, 92);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(39, 20);
+            this.textBox10.TabIndex = 24;
+            // 
+            // volumen
+            // 
+            this.volumen.AutoSize = true;
+            this.volumen.Location = new System.Drawing.Point(484, 69);
+            this.volumen.Name = "volumen";
+            this.volumen.Size = new System.Drawing.Size(48, 13);
+            this.volumen.TabIndex = 25;
+            this.volumen.Text = "Volumen";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(538, 66);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(39, 20);
+            this.textBox11.TabIndex = 26;
+            // 
+            // medidas
+            // 
+            this.medidas.AutoSize = true;
+            this.medidas.Location = new System.Drawing.Point(400, 95);
+            this.medidas.Name = "medidas";
+            this.medidas.Size = new System.Drawing.Size(47, 13);
+            this.medidas.TabIndex = 27;
+            this.medidas.Text = "Medidas";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(591, 92);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(168, 20);
+            this.textBox12.TabIndex = 28;
+            // 
+            // background_table
+            // 
+            this.background_table.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.background_table.Location = new System.Drawing.Point(34, 118);
+            this.background_table.Name = "background_table";
+            this.background_table.Size = new System.Drawing.Size(725, 320);
+            this.background_table.TabIndex = 29;
+            this.background_table.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // document_visor
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.background_table);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.medidas);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.volumen);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.peso);
+            this.Controls.Add(this.incidencias_checkbox);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.bultos);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.portes);
+            this.Controls.Add(this.agencia_transporte);
+            this.Controls.Add(this.expedicion);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.seguimiento);
+            this.Controls.Add(this.hora);
+            this.Controls.Add(this.fecha);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "main";
-            this.Text = "Pakets";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.main_Load);
+            this.Name = "document_visor";
+            this.Text = "document_visor";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -885,6 +976,9 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paqueteAisladoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guardarComoToolStripMenuItem;
@@ -904,8 +998,6 @@
         private System.Windows.Forms.ToolStripMenuItem warepaketToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rehacerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deshacerToolStripMenuItem;
@@ -921,31 +1013,6 @@
         private System.Windows.Forms.ToolStripMenuItem correctorOrtográficoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventanaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarActualizacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem historialDeVersionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarActualizacionesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripMenuItem VerlaayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cortarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem copiarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem pegarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem paqueteAisladoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.Panel separatorPanel;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private recentlyopened_screen recentlyopened_screen;
         private System.Windows.Forms.ToolStripMenuItem tráficoDePaqueteríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regístrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
@@ -957,9 +1024,8 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem permisosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripMenuItem impresiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem preferenciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
@@ -967,7 +1033,10 @@
         private System.Windows.Forms.ToolStripMenuItem gestionarHerramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarNuevasHerramientasEnInternetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importarHerramientasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem impresiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarNuevaImpresoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modelosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lotesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
@@ -975,8 +1044,41 @@
         private System.Windows.Forms.ToolStripMenuItem gestionarModelosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripMenuItem preferenciasDeImpresiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem preferenciasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventanaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem VerlaayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarActualizacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialDeVersionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarActualizacionesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visitaNuestraWebToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label fecha;
+        private System.Windows.Forms.Label hora;
+        private System.Windows.Forms.Label seguimiento;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label expedicion;
+        private System.Windows.Forms.Label agencia_transporte;
+        private System.Windows.Forms.Label portes;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label bultos;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.CheckBox incidencias_checkbox;
+        private System.Windows.Forms.Label peso;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label volumen;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label medidas;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Panel background_table;
     }
 }

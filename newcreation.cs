@@ -382,6 +382,8 @@ namespace PAKETS
             }
         }
 
+        #region GUARDADO DE DATOS
+
         // Crear carpeta en Documentos y guardar <Razón_Social>.pakets y copias de hasta 2 imágenes
         private void SavePaketsPackage()
         {
@@ -508,6 +510,8 @@ namespace PAKETS
             if (string.IsNullOrWhiteSpace(result)) result = "PAKETS_Profile";
             return result;
         }
+
+        #endregion
 
         // Helper para recorrer recursivamente controles hijos
         private IEnumerable<Control> GetAllControls(Control parent)
